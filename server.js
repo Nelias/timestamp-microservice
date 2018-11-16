@@ -24,7 +24,6 @@ app.get("/api/timestamp/", function (req, res) {
 });
 
 app.get("/api/timestamp/:date_string?", function (req, res) {
-  console.log(typeof req.params.date_string)
   if (new Date(req.params.date_string).toUTCString() === "Invalid Date") {
     res.json({"error": "Invalid Date" });
   } else {
